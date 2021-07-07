@@ -1,5 +1,5 @@
 # Olx-Clone
-![img] (https://images.yourstory.com/cs/wordpress/2013/08/Logo-OLX.in_1.jpg)
+! [img] (https://images.yourstory.com/cs/wordpress/2013/08/Logo-OLX.in_1.jpg)
 
 A website where users can sell their cars by posting ads and buy cars sold by sellers
 
