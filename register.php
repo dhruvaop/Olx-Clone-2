@@ -1,58 +1,11 @@
-<?php      
- //session_start();
-//     $host = "localhost";  
-//     $user = "root";  
-//     $password = '';  
-//     $db_name = "olx";  
+<?php
+session_start();
+ error_reporting(E_ERROR | E_WARNING | E_PARSE); 
+if($_SESSION['user']){
+   header("location:homepage.php");
+}
 
-//     if($_SESSION['user']){
-//    header("location:homepage.php");
-// }
-      
-   
-    // if($_SERVER["REQUEST_METHOD"]=="POST"){
-    //      $con = mysqli_connect($host, $user, $password, $db_name);  
-    // if(mysqli_connect_errno()) {  
-    //     die("Failed to connect with MySQL: ". mysqli_connect_error());  
-    // }  
-    //  $user=($_POST['username']);
-    //  $fname=($_POST['fname']);
-    //  $lname=($_POST['lname']);
-    //  $email=($_POST['email']);
-    //  $phone=($_POST['phone']);
-    //  $addr=($_POST['address']);
-    //  $city=($_POST['city']);
-    //  $state=($_POST['state']);
-    //  $pass=($_POST['pass']);
-
-     
-     
-
-    //  $sql="insert into user_details(username, first_name, last_name, email, phone, address, city, state, pass) values('".$user."','".$fname."','".$lname."','".$email."','".$phone."','".$addr."','".$city."','".$state."','".$pass."')"; 
-      
-
-      
-    //     if(mysqli_query($con,$sql))
-    //    {
-
-            
-    //          header("location:login.php");
-            
-
-    //      }
-    //      else {
-    //          // $_SESSION['isloggedin']=false;
-    //         $err="unable to register";
-           
-
-    //      }
-
-    // }
-
-?> 
-
-
-
+?>
 
 <!DOCTYPE html>
 <html lang="en">

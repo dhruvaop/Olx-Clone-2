@@ -1,6 +1,8 @@
 <?php
 session_start();
-
+if($_SESSION['user']){
+    header("location:homepage.php");
+ }
     if(isset($_POST["rbtn"])){
         include("config.php");
         $verifyotp=$_POST['rotp'];
@@ -10,20 +12,7 @@ session_start();
     $count=mysqli_num_rows($result);
     if($count==1){
        
-            //     $con = mysqli_connect($host, $user, $password, $db_name);  
-            // if(mysqli_connect_errno()) {  
-            //    die("Failed to connect with MySQL: ". mysqli_connect_error());  
-            // }  
-            // $user=($_POST['username']);
-            // $fname=($_POST['fname']);
-            // $lname=($_POST['lname']);
-            // $email=($_POST['email']);
-            // $phone=($_POST['phone']);
-            // $addr=($_POST['address']);
-            // $city=($_POST['city']);
-            // $state=($_POST['state']);
-            // $pass=($_POST['pass']);
-            
+           
             
             
             
