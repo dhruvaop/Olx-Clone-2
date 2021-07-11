@@ -1,6 +1,5 @@
 <?php
-            session_start();
- 
+ session_start(); 
 include("config.php");
   error_reporting(E_ERROR | E_WARNING | E_PARSE); 
 if($_SESSION['user']){

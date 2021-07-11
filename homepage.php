@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-
 ?>
 
 
@@ -26,10 +24,7 @@ session_start();
   <script>
     function myfav(product_id) {
       var check = document.getElementById(product_id).checked ? '1' : '0';
-      //  var check=0;
-      //  if(chk==true){
-      //    check=1;
-      //  }
+     
       $.post('ajax.php', { checked: check, p_id: product_id });
 
     }
@@ -74,11 +69,7 @@ session_start();
       font-weight: 700;
     }
 
-    /* .bo{
-         border: 5px solid;
-        
-        border-image:   linear-gradient(to right,#3a77ff 33%, #23e5db 66%, #ffce32 99%) 3;
-        } */
+  
     h5 {
       font-weight: bolder;
     }
@@ -232,7 +223,7 @@ session_start();
           <?php
         error_reporting(E_ALL & ~E_NOTICE);
         
-//if(!isset($_SESSION['isloggedin']) &&  !$_SESSION['isloggedin'==true]):
+
   if(!$_SESSION['user']):
 
 ?>
