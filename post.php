@@ -279,7 +279,23 @@
 
 
     
+<script>
+        var loadFile = function (event, id, i) {
+            var input = document.getElementById(id);
+            var img = document.getElementById(i);
+            // var image = document.getElementById('output');
+            // image.src = URL.createObjectURL(event.target.files[0]);
+            var fileName = input.files[0].name;
 
+            // use fileName however fits your app best, i.e. add it into a div
+            img.textContent = 'File uploaded: ' + fileName;
+
+
+        };
+
+
+
+    </script>
     <script src="jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 </body>
