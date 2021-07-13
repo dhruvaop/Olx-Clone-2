@@ -26,7 +26,6 @@ session_start();
       var check = document.getElementById(product_id).checked ? '1' : '0';
      
       $.post('ajax.php', { checked: check, p_id: product_id });
-
     }
   </script>
 
