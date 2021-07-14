@@ -1,5 +1,4 @@
 <?php
-
 $p_id=$_GET['id'];
  include("config.php");
       $sql = "select * from post where product_id='$p_id'";  
