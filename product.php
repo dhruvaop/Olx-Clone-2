@@ -1,4 +1,10 @@
 <?php
+session_start();
+ error_reporting(E_ERROR | E_WARNING | E_PARSE); 
+if(!$_SESSION['user']){
+   header("location:login.php");
+}
+
 $p_id=$_GET['id'];
  include("config.php");
       $sql = "select * from post where product_id='$p_id'";  
