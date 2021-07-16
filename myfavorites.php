@@ -421,6 +421,21 @@
             <?php
                     }
           }
+          else
+         {
+            ?>
+
+ <div class="container d-flex flex-column justify-content-center align-items-center mb-3">
+                <img style="max-width: 200px;" src="uploads/no_result.png" alt="">
+                <p style="font-size: 16px;
+    line-height: 24px;
+    color: rgba(0,47,52,.64);
+    font-weight: 700;">You haven't liked anything yet</p>
+               
+               
+            </div>
+<?php
+          }
           
 
          
