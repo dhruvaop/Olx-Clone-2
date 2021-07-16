@@ -4,7 +4,7 @@ session_start();
 if(!$_SESSION['user']){
    header("location:login.php");
 }
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +22,14 @@ if(!$_SESSION['user']){
         crossorigin="anonymous">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
     
+<script>
+        function myfav(product_id) {
+            var check = document.getElementById(product_id).checked ? '1' : '0';
+            
+            $.post('ajax.php', { checked: check, p_id: product_id });
+
+        }
+    </script>
 
     <style>
         .bg-light {
