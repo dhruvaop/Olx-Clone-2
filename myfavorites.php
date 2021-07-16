@@ -409,9 +409,6 @@ if(!$_SESSION['user']){
          ?>
 
 
-
-
-
                             <input id="<?php echo $p_id; ?>" type="checkbox" onclick="myfav(<?php echo $p_id; ?>);"
                                 value="<?php echo $p_id; ?>" <?php echo ($li==1 ? 'checked' :'');?> />
                             <label for="<?php echo $p_id; ?>" class="mt-3 ml-2"></label>
@@ -454,10 +451,6 @@ if(!$_SESSION['user']){
           $con->close();
         
 ?>
-
-
-
-
 
         </div>
     </div>
