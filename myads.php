@@ -339,10 +339,7 @@
                         while($row = $result->fetch_assoc()) 
                         {
                             $li=0;
-                        //     $pid=$r["p_id"];
-                        //    $sql1 = "select * from post where product_id='$pid'"; 
-                        //     $result1 = mysqli_query($con, $sql1);  
-                        //      $row=mysqli_fetch_row($result1);
+                       
 
                          ?>
             <div class="col col-6 col-lg-3 mb-2  ">
@@ -460,7 +457,7 @@
           }
 
          
-          $con->close();
+        $con->close();
         
 ?>
 
