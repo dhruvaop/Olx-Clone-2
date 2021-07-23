@@ -1,4 +1,15 @@
 
+<?php
+session_start();
+ error_reporting(E_ERROR | E_WARNING | E_PARSE); 
+if(!$_SESSION['user']){
+   header("location:login.php");
+}
+
+
+
+?>
+
 
 
 <!DOCTYPE html>
