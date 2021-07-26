@@ -22,7 +22,42 @@ if(!$_SESSION['user']){
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script>
+        $(document).ready(function () {
 
+            filter_data();
+
+            function filter_data() {
+                var action = 'fetch_data';
+                var brand = get_filter('brand');
+                var model = get_filter('model');
+                var fuel = get_filter('fuel');
+                var no_of_owner = get_filter('no_of_owner');
+                var transmission = get_filter('transmission');
+                $.ajax({
+                    url: "fetch_data.php",
+                    method: "POST",
+                    data: { action: action, brand: brand, model: model, no_of_owner: no_of_owner, transmission: transmission, fuel: fuel },
+                    success: function (data) {
+                        $('#id').html(data);
+                    }
+                });
+            }
+
+            function get_filter(class_name) {
+                var filter = [];
+                $('.' + class_name + ':checked').each(function () {
+                    filter.push($(this).val());
+                });
+                return filter;
+            }
+
+            $('.common_selector').click(function () {
+                filter_data();
+            });
+        });
+
+    </script>
     
     <style>
         .bg-light {
